@@ -37,29 +37,97 @@ public class Main {
 
         switch (option) {
             case 1:
-                System.out.println("");
+                System.out.println("1 - NIF");
+                int typeDoc = sc.nextInt();
+                sc.nextLine();
+                System.out.println("ID: ");
+                String id = sc.nextLine();
+
+                if (uv.checkId(typeDoc, id)) {
+                    System.out.println("Correcto");
+                } else {
+                    System.out.println("Incorrecto");
+                }
                 break;
+                
             case 2:
-                System.out.println("");
+                System.out.println("Introduce la fecha (DD/MM/YYYY): ");
+                String date = sc.nextLine();
+
+                if (uv.checkFormatDate(date)) {
+                    System.out.println("Correcto");
+                } else {
+                    System.out.println("Incorrecto");
+                }
                 break;
+                
             case 3:
-                System.out.println("");
+                System.out.println("Introduce tu fecha de nacimiento:");
+                String birthDate = sc.nextLine();
+                int age = uv.calculateAge(birthDate);
+
+                if (age == -1) {
+                    System.out.println("Fecha no válida");
+                } else {
+                    System.out.println("Tienes " + age + " años.");
+                }
                 break;
+                
             case 4:
-                System.out.println("");
+                System.out.println("Introduce tu código postal: ");
+                String zip = sc.nextLine();
+
+                if (uv.checkPostalCode(zip)) {
+                    System.out.println("Correcto");
+                } else {
+                    System.out.println("Incorrecto");
+                }
                 break;
+                
             case 5:
-                System.out.println("");
+                System.out.println("Introduce un número: ");
+                String strNumber = sc.nextLine();
+
+                if (uv.isNumeric(strNumber)) {
+                    System.out.println("Correcto");
+                } else {
+                    System.out.println("Incorrecto");
+                }
                 break;
+                
             case 6:
-                System.out.println("");
+                System.out.println("Introduce una letra: ");
+                String strLetter = sc.nextLine();
+
+                if (uv.isAlphabetic(strLetter)) {
+                    System.out.println("Correcto");
+                } else {
+                    System.out.println("Incorrecto");
+                }
                 break;
+                
             case 7:
-                System.out.println("");
+                System.out.println("Introduce tu correo: ");
+                String email = sc.nextLine();
+
+                if (uv.checkEmail(email)) {
+                    System.out.println("Correcto");
+                } else {
+                    System.out.println("Incorrecto");
+                }
                 break;
+                
             case 8:
-                System.out.println("");
+                System.out.println("Introduce tu nombre: ");
+                String name = sc.nextLine();
+
+                if (uv.checkName(name)) {
+                    System.out.println("Correcto");
+                } else {
+                    System.out.println("Incorrecto");
+                }
                 break;
+
             default:
                 System.out.println("Invalid option.");
                 break;
