@@ -120,7 +120,7 @@ public class UserDataValidations {
         for (int i = 0; i < str.length(); i++) {
             char c = str.charAt(i);
 
-            if (!((c <= 'a' && c >= 'z') || (c <= 'A' && c >= 'Z') || c == ' ')) {
+            if (!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || c == ' ')) {
                 return false;
             }
         }

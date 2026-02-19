@@ -37,10 +37,12 @@ public class Main {
 
         switch (option) {
             case 1:
+                System.out.println("Documents:");
                 System.out.println("1 - NIF");
+                System.out.print("Enter an option: ");
                 int typeDoc = sc.nextInt();
                 sc.nextLine();
-                System.out.println("ID: ");
+                System.out.print("ID: ");
                 String id = sc.nextLine();
 
                 if (uv.checkId(typeDoc, id)) {
@@ -51,7 +53,7 @@ public class Main {
                 break;
                 
             case 2:
-                System.out.println("Introduce la fecha (DD/MM/YYYY): ");
+                System.out.print("Introduce una fecha (DD/MM/YYYY): ");
                 String date = sc.nextLine();
 
                 if (uv.checkFormatDate(date)) {
@@ -62,7 +64,7 @@ public class Main {
                 break;
                 
             case 3:
-                System.out.println("Introduce tu fecha de nacimiento:");
+                System.out.print("Introduce la fecha de nacimiento: ");
                 String birthDate = sc.nextLine();
                 int age = uv.calculateAge(birthDate);
 
@@ -74,7 +76,7 @@ public class Main {
                 break;
                 
             case 4:
-                System.out.println("Introduce tu código postal: ");
+                System.out.print("Introduce tu codigo postal: ");
                 String zip = sc.nextLine();
 
                 if (uv.checkPostalCode(zip)) {
@@ -85,7 +87,7 @@ public class Main {
                 break;
                 
             case 5:
-                System.out.println("Introduce un número: ");
+                System.out.print("Introduce un numero: ");
                 String strNumber = sc.nextLine();
 
                 if (uv.isNumeric(strNumber)) {
@@ -96,7 +98,7 @@ public class Main {
                 break;
                 
             case 6:
-                System.out.println("Introduce una letra: ");
+                System.out.print("Introduce una letra: ");
                 String strLetter = sc.nextLine();
 
                 if (uv.isAlphabetic(strLetter)) {
@@ -107,7 +109,7 @@ public class Main {
                 break;
                 
             case 7:
-                System.out.println("Introduce tu correo: ");
+                System.out.print("Introduce tu correo: ");
                 String email = sc.nextLine();
 
                 if (uv.checkEmail(email)) {
@@ -118,7 +120,7 @@ public class Main {
                 break;
                 
             case 8:
-                System.out.println("Introduce tu nombre: ");
+                System.out.print("Introduce tu nombre: ");
                 String name = sc.nextLine();
 
                 if (uv.checkName(name)) {
@@ -133,5 +135,4 @@ public class Main {
                 break;
         }
     }
-
 }
