@@ -120,7 +120,13 @@ public class UserDataValidations {
         return true;
     }
 
-    // 5. boolean isNumeric(String str): Debe Validar que el contenido del String es numérico. Si lo es retornará true, en caso contrario false. 
+    /**
+     * 5. boolean isNumeric(String str): Debe Validar que el contenido del String es numérico. 
+     * Si lo es retornará true, en caso contrario false. 
+     * 
+     * @param str, el String introducido por el usuario.
+     * @return si el String introducido por el usuario cumple las condiciones de ser un número.
+     */    
     public boolean isNumeric(String str) {
         if (str == null || str.equals("")) {
             return false;
@@ -137,7 +143,13 @@ public class UserDataValidations {
         return true;
     }
 
-    // 6. boolean isAlphabetic(String str): Debe Validar que el contenido del String solo tenga letras. Si es así retornará true, en caso contrario false. 
+    /**
+     * 6. boolean isAlphabetic(String str): Debe Validar que el contenido del String solo tenga letras. 
+     * Si es así retornará true, en caso contrario false. 
+     * 
+     * @param str, el String introducido pir el usuario.
+     * @return si el String introducido por el ususario cumple las condiciones de ser una letra.
+     */
     public boolean isAlphabetic(String str) {
         if (str == null || str.equals("")) {
             return false;
@@ -154,7 +166,13 @@ public class UserDataValidations {
         return true;
     }
     
-    // 7. boolean checkEmail(String email): Debe validar que el formato del correo se corresponde con un correo electronico (debe contener una @ y la terminación debe ser .com, .es, …). Si es correcto retornará true, en caso contrario false. 
+    /**
+     * 7. boolean checkEmail(String email): Debe validar que el formato del correo se corresponde con un correo electronico (debe contener una @ y la terminación debe ser .com, .es, …). 
+     * Si es correcto retornará true, en caso contrario false. 
+     * 
+     * @param email, el correo introducido por el usuario.
+     * @return si el correo introducido cumple las condiciones de ser un correo.
+     */
     public boolean checkEmail (String email) {
         if (!email.contains("@")) {
             return false;
@@ -167,7 +185,13 @@ public class UserDataValidations {
         return true;
     }
     
-    // 8. boolean checkName(String name): Debe validar que el nombre tiene una longitud lógica y que no contenga números. Si es correcto retornará true, en caso contrario false. 
+    /**
+     * 8. boolean checkName(String name): Debe validar que el nombre tiene una longitud lógica y que no contenga números. 
+     * Si es correcto retornará true, en caso contrario false. 
+     * 
+     * @param name, que es el nombre introducido por el usuario.
+     * @return si el nombre cumple las condiciones de ser un nombre.
+     */
     public boolean checkName(String name) {
         if (!isAlphabetic(name)) {
             return false;
