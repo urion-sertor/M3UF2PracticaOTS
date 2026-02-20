@@ -71,7 +71,7 @@ public class Main {
                 if (age == -1) {
                     System.out.println("Fecha no válida");
                 } else {
-                    System.out.println("Tienes " + age + " años.");
+                    System.out.println("Tienes " + age + " anios.");
                 }
                 break;
                 

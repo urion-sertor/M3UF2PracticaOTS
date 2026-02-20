@@ -13,7 +13,14 @@ import java.util.Scanner;
 
 public class UserDataValidations {
 
-    // 1. boolean checkId (int typeDoc, String id): Debe validar si el NIF (tipo de documento 1) recibido es correcto o no. Si es correcto retornará true, en caso contrario false. De momento si el tipo de documento es otro se devolverá false.
+    /** 
+     * 1. boolean checkId (int typeDoc, String id): Debe validar si el NIF (tipo de documento 1) recibido es correcto o no. 
+     * Si es correcto retornará true, en caso contrario false. De momento si el tipo de documento es otro se devolverá false.
+     * 
+     * @param typeDoc, el tipo de documento del que se revisa el formato. El usuario lo escoge.
+     * @param id, el número del documento. El usuario lo introduce.
+     * @return si el número de documento concuerda con el formato que el tipo de documento establece.
+     */
     public boolean checkId(int typeDoc, String id) {
         if (typeDoc != 1) {
             return false;
@@ -33,7 +40,13 @@ public class UserDataValidations {
         return true;
     }
 
-    // 2. boolean checkFormatDate(String date): Debe validar que el formato de la fecha y su valor es correcto. El formato esperado es “dd/mm”aaaa”. Si es correcto retornará true, en caso contrario false. Usa la función split de la clase String.
+    /** 2. boolean checkFormatDate(String date): Debe validar que el formato de la fecha y su valor es correcto. 
+     *  El formato esperado es “dd/mm”aaaa”. Si es correcto retornará true, en caso contrario false. 
+     *  Usa la función split de la clase String.
+     *
+     *  @param date, una fecha introducida por el usuario.
+     *  @return si la fecha introducida cumple el formato de fecha establecido.
+     */
     public boolean checkFormatDate(String date) {
         String[] ddmmyy = date.split("/");
 
@@ -62,7 +75,14 @@ public class UserDataValidations {
         return true;
     }
 
-    // 3. int calculateAge(String birthDate): Debe calcular la edad en base a la fecha de nacimiento. Previamente debe validarse que la fecha sea correcta. En caso de que la fecha sea coherente se devolverá la edad calculada, en caso contrario devolveremos -1.
+    /**
+     * 3. int calculateAge(String birthDate): Debe calcular la edad en base a la fecha de nacimiento. 
+     * Previamente debe validarse que la fecha sea correcta. 
+     * En caso de que la fecha sea coherente se devolverá la edad calculada, en caso contrario devolveremos -1.
+     * 
+     * @param birthDate, una fecha introducida por el usuario.
+     * @return la edad tras restar el año actual al año de la fecha.
+    */
     public int calculateAge(String birthDate) {
         if (checkFormatDate(birthDate) == false) {
             return -1;
@@ -81,7 +101,13 @@ public class UserDataValidations {
         return age;
     }
 
-    // 4. boolean checkPostalCode(String zip): Debe validar que el formato del código postal sea correcto. El formato esperado es nnnnn (5 números). Si es correcto retornará true, en caso contrario false. 
+    /** 
+     * 4. boolean checkPostalCode(String zip): Debe validar que el formato del código postal sea correcto. 
+     * El formato esperado es nnnnn (5 números). Si es correcto retornará true, en caso contrario false. 
+     * 
+     * @param zip, el código postal.
+     * @return si el número introducido cumple el formato de código postal.
+     */
     public boolean checkPostalCode(String zip) {
         if (zip.length() != 5) {
             return false;
