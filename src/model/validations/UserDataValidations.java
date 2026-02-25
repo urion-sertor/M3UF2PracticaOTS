@@ -11,6 +11,8 @@ import java.util.Scanner;
  * @author orioltorsan
  */
 
+// Hecho por Oriol Torres y Nil Borràs
+
 public class UserDataValidations {
 
     /** 
